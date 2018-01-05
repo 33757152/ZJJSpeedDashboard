@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MineViewController.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"首页";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(10, 100, SCREEN_WIDTH-20, 50);
+    button.backgroundColor = [UIColor yellowColor];
+    [button setTitle:@"仪表盘" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(comeOut) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
+- (void)comeOut {
+    MineViewController *vc = [MineViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

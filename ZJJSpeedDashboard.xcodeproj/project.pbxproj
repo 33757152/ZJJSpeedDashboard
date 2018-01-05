@@ -13,6 +13,8 @@
 		89C526521FFF06F800A925E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C526511FFF06F800A925E1 /* Assets.xcassets */; };
 		89C526551FFF06F800A925E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C526531FFF06F800A925E1 /* LaunchScreen.storyboard */; };
 		89C526581FFF06F800A925E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C526571FFF06F800A925E1 /* main.m */; };
+		89C526621FFF079400A925E1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C526611FFF079400A925E1 /* MineViewController.m */; };
+		89C526651FFF07D300A925E1 /* ZJJDrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C526641FFF07D300A925E1 /* ZJJDrawLineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		89C526541FFF06F800A925E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C526561FFF06F800A925E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89C526571FFF06F800A925E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89C526601FFF079400A925E1 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		89C526611FFF079400A925E1 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		89C526631FFF07D300A925E1 /* ZJJDrawLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJJDrawLineView.h; sourceTree = "<group>"; };
+		89C526641FFF07D300A925E1 /* ZJJDrawLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJJDrawLineView.m; sourceTree = "<group>"; };
+		89C526661FFF082200A925E1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +65,13 @@
 		89C526471FFF06F800A925E1 /* ZJJSpeedDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				89C5265F1FFF074500A925E1 /* Controller */,
+				89C5265E1FFF074500A925E1 /* View */,
 				89C526481FFF06F800A925E1 /* AppDelegate.h */,
 				89C526491FFF06F800A925E1 /* AppDelegate.m */,
 				89C5264B1FFF06F800A925E1 /* ViewController.h */,
 				89C5264C1FFF06F800A925E1 /* ViewController.m */,
+				89C526661FFF082200A925E1 /* PrefixHeader.pch */,
 				89C5264E1FFF06F800A925E1 /* Main.storyboard */,
 				89C526511FFF06F800A925E1 /* Assets.xcassets */,
 				89C526531FFF06F800A925E1 /* LaunchScreen.storyboard */,
@@ -69,6 +79,24 @@
 				89C526571FFF06F800A925E1 /* main.m */,
 			);
 			path = ZJJSpeedDashboard;
+			sourceTree = "<group>";
+		};
+		89C5265E1FFF074500A925E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89C526631FFF07D300A925E1 /* ZJJDrawLineView.h */,
+				89C526641FFF07D300A925E1 /* ZJJDrawLineView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89C5265F1FFF074500A925E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89C526601FFF079400A925E1 /* MineViewController.h */,
+				89C526611FFF079400A925E1 /* MineViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +130,7 @@
 				TargetAttributes = {
 					89C526441FFF06F800A925E1 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -145,6 +173,8 @@
 				89C5264D1FFF06F800A925E1 /* ViewController.m in Sources */,
 				89C526581FFF06F800A925E1 /* main.m in Sources */,
 				89C5264A1FFF06F800A925E1 /* AppDelegate.m in Sources */,
+				89C526621FFF079400A925E1 /* MineViewController.m in Sources */,
+				89C526651FFF07D300A925E1 /* ZJJDrawLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +308,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hong Wu (W8B4TQ8GK2)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B77E2S42YJ;
+				GCC_PREFIX_HEADER = /Users/zhangjinjiang/Desktop/ZJJSpeedDashboard/ZJJSpeedDashboard/PrefixHeader.pch;
 				INFOPLIST_FILE = ZJJSpeedDashboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.it.ZJJSpeedDashboard;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.fengpu.ZJJSpeedDashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8454d787-fc28-41ec-a024-f778a689335f";
+				PROVISIONING_PROFILE_SPECIFIER = FengPuAllMobileTestProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -291,11 +326,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hong Wu (W8B4TQ8GK2)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B77E2S42YJ;
+				GCC_PREFIX_HEADER = /Users/zhangjinjiang/Desktop/ZJJSpeedDashboard/ZJJSpeedDashboard/PrefixHeader.pch;
 				INFOPLIST_FILE = ZJJSpeedDashboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.it.ZJJSpeedDashboard;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.fengpu.ZJJSpeedDashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8454d787-fc28-41ec-a024-f778a689335f";
+				PROVISIONING_PROFILE_SPECIFIER = FengPuAllMobileTestProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
